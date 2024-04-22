@@ -12,7 +12,7 @@
       "src": "Backend/NoteCanvas/build_files.sh",
       "use": "@vercel/static-build",
       "config": {
-          "distDir": "Backend/NoteCanvas/static"
+          "distDir": "staticfiles_build"
        }
     }
   ],

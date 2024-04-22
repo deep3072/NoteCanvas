@@ -3,7 +3,9 @@
     {
       "src": "/Backend/NoteCanvas/**/*.py",
       "use": "@vercel/python",
-      "python": "3.9" 
+      "config": {
+        "python": "3.9"
+      }
     }
   ],
   "routes": [

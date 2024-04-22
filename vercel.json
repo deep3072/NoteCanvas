@@ -1,17 +1,13 @@
 {
-  "builds": [
-    {
-      "src": "/Backend/NoteCanvas/**/*.py",
-      "use": "@vercel/python",
-      "config": {
-        "python": "3.7"
-      }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/NoteCanvas/NoteCanvas/wsgi.py"
-    }
-  ]
+    "builds": [{
+        "src": "Backend/NoteCanvas/NoteCanvas/wsgi.py",
+        "use": "@ardnt/vercel-python-wsgi",
+        "config": { "maxLambdaSize": "15mb" }
+    }],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "Backend/NoteCanvas/NoteCanvas/wsgi.py"
+        }
+    ]
 }

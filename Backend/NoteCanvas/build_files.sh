@@ -11,6 +11,8 @@ source venv/bin/activate
 echo "Installing Django..."
 pip install django
 
+pip install psycopg2-binary
+
 # Install project dependencies
 echo "Building project packages..."
 pip install -r requirements.txt

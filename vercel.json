@@ -1,7 +1,7 @@
 {
   "builds": [
     {
-      "src": "Backend/NoteCanvas",
+      "src": "Backend/NoteCanvas/manage.py",
       "use": "@vercel/python"
     }
   ],

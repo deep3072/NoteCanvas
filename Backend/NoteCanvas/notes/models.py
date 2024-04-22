@@ -1,9 +1,11 @@
+from uuid import uuid4
 from django.db import models
 from canvas.models import Canvas
 
 # Create your models here.
 
 class Note(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
     canvas = models.ForeignKey(Canvas, on_delete=models.CASCADE, related_name='notes')
     notesBody = models.TextField(blank=True)
     posX = models.FloatField(default=0)

@@ -16,7 +16,7 @@ def dashboard(request):
     print(canvases)
     formatted_canvases = [
         {
-            'id': index+1,
+            'id': canvas['id'],
             'title': canvas['title'],
             'timestamp': localtime(canvas['created_at']).strftime('%Y-%m-%d %H:%M:%S')  # Adjust date format as needed
         }

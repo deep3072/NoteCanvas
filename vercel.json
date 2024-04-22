@@ -11,7 +11,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/Backend/NoteCanvas/wsgi.py"
+      "dest": "/Backend/NoteCanvas/NoteCanvas/wsgi.py"
     }
   ]
 }

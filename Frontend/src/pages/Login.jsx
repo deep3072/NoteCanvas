@@ -54,8 +54,7 @@ const Login = () => {
         <>
             <Stack
                 sx={{
-                    zIndex: 1,
-
+                    backgroundImage: { OrangeBlobBG },
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                 }}
@@ -133,7 +132,6 @@ const Login = () => {
                     </LoginPageCard>
                 </Stack>
                 {/* ----TOP ROW ENDS---- */}
-
                 {/* ----BOTTOM ROW STARTS---- */}
                 <Stack direction={"row"}>
                     {/* ----STATUS CARD---- */}

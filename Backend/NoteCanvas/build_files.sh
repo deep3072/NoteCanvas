@@ -1,11 +1,27 @@
 #!/usr/bin/env bash
 
-echo "Building project packages..."
-python3 -m pip install -r requirements.txt
+# Create a virtual environment
+echo "Creating virtual environment..."
+python3 -m venv venv
 
+# Activate the virtual environment
+source venv/bin/activate
+
+# Install Django
+echo "Installing Django..."
+pip install django
+
+# Install project dependencies
+echo "Building project packages..."
+pip install -r requirements.txt
+
+# Run Django management commands
 echo "Migrating Database..."
-python3 manage.py makemigrations --noinput
-python3 manage.py migrate --noinput
+python manage.py makemigrations --noinput
+python manage.py migrate --noinput
 
 echo "Collecting static files..."
-python3 manage.py collectstatic --noinput
+python manage.py collectstatic --noinput
+
+# Deactivate the virtual environment
+deactivate

@@ -150,7 +150,7 @@ const Preferences = () => {
                     newPassword: newPassword,
                 };
                 try {
-                    const response = await fetch('http://127.0.0.1:8000/accounts/forget_password/', {
+                    const response = await fetch('http://127.0.0.1:8000/accounts/update_password/', {
                         method: 'PUT',
                         headers: {
                             'Content-Type': 'application/json',
@@ -174,12 +174,12 @@ const Preferences = () => {
                 } catch (error) {
                     console.error("Error updating password:", error);
                     // setFormErrors(error.message);
-                    setFormErrors("Password updated successfully");
+                    setFormErrors("Current password is wrong");
                     
                 }
     
-                console.log("Password updated successfully", newPasswordData);
-                setFormErrors("Password updated successfully");
+                // console.log("Password updated successfully", newPasswordData);
+                // setFormErrors("Password updated successfully");
                 setCurrentPassword("");
                 setNewPassword("");
                 setConfirmPassword("");
